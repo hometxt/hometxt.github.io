@@ -1879,7 +1879,12 @@ ___| |___| |___| |___| |__|                                    |                
 <script>
   urlin=window.location.search;
   params = new URLSearchParams(urlin);
-  e=params.get('e');
+  if(params.has('e')){
+    e=params.get('e');
+  }else{
+    e="plain"
+
+  }
   env(e);
 </script>
 </body>
