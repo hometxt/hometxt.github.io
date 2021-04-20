@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>The onclick Event</h1>
-
-<p>The onclick event is used to trigger a function when an element is clicked on.</p>
-
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-
-<text onclick="myFunction()">Click me</button>
-
-<p id="demo"></p>
-
-
-
-
-<script type="text/javascript">
+<head>
+<script>
 function myFunction() { 
   
   //history.pushState({page: 1}, "title 1", "?page=1")
   //history.replaceState({ additionalInformation: 'Updated the URL with JS' },"weeeee" , "/?e=night");
   //history.pushState({ additionalInformation: 'Updated the URL with JS' },"weeeee" , "/ufo");
-  a="no";
+  var element = document.getElementById("id01");
+  element.innerHTML = "New Heading <br> ";
   //document.open();
   //document.close();	
  }
+</script>
+</head>
+<body>
+
+
+
+<text onclick="myFunction()">Click me</button>
+<script type="text/javascript">
+
 
 
 a="Hello World<br><br><br> dfsdggsdg"
  document.write(a);
 </script>
 
+
+<h1 id="id01">Old Heading</h1>
 </body>
 </html> 
