@@ -79,7 +79,7 @@
 
      function nextimage(){
         n=n+1;
-        document.getElementById('thegif').src=n.toString()+'.gif';
+        document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
 
 
 
@@ -260,6 +260,7 @@
 <script>
   urlin=window.location.search;
   params = new URLSearchParams(urlin);
+  n=0;
   if(params.has('e')){
     e=params.get('e');
   }else{
