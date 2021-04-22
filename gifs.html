@@ -37,7 +37,7 @@
 #left{float:left;width:240px;}
 #right{float:right;width:240px;}
 #center{margin:0 auto;width:600px;
-  height:600px;
+  height:700px;
   display: flex; 
   justify-content: center;
   align-items: center;}
@@ -75,6 +75,15 @@
               document.getElementById("text"+i.toString()).style.display = "";
            }
         } 
+     }
+
+     function nextimage(){
+        n=n+1;
+        document.getElementById('thegif').src=n.toString()+'gif';
+
+
+
+
      }
     </script>
  </head>
@@ -200,8 +209,8 @@
 |\\\\\\\\\\\\\\\\\                `.       
 |\\\\\\\\\\\\\\\\\\                 `.     
 |\\\\\\\\\\\\\\\\\\\                  `. 
-|\\\\\\\\\\\\\\\\\\\\___________________`.
-|\\\\\\\\\\\\\\\\\\\/###################F´ 
+<button onclick="nextimage()">|\\\\\\\\\\\\\\\\\\\\___________________`.</button>
+<button onclick="nextimage()">|\\\\\\\\\\\\\\\\\\\/###################F´</button> 
 |\\\\\\\\\\\\\\\\\\/##################F´  
 |\\\\\\\\\\\\\\\\\/#################F´
 |\\\\\\\\\\\\\\\\/################F´   
@@ -223,8 +232,12 @@
 |/F´                    
 |/          
 </div>
-  <div id="center" ><img src="gfs/a.gif" class="center"></div>
+  <div id="center" ><img id="thegif" src="gfs/1.gif" class="center"></div>
 </div>
+                   
+                   
+                   
+                   
                    
                    
                    
@@ -234,9 +247,6 @@
                            /                                                                                                                                            \
                           /                                                                                                                                              \
                          /________________________________________________________________________________________________________________________________________________\                         
-
-
-
 
 
                          
@@ -253,8 +263,12 @@
   if(params.has('e')){
     e=params.get('e');
   }else{
-    e="plain"
-
+    e="plain";
+  }
+  if(params.has('n')){
+    n=params.get('n');
+  }else{
+    n=1;
   }
   env(e);
 </script>
