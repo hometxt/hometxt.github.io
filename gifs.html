@@ -80,10 +80,12 @@
      function nextimage(){
         n=n+1;
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
-
-
-
-
+     }
+     function previmage(){
+        if(n>1){
+          n=n-1;
+        }
+        document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
      }
     </script>
  </head>
@@ -133,48 +135,48 @@
           
  
  
-                                         /|
-                                       .`/|
-                                     .` //|
-                                   .`  ///|
-                                 .`   ////|
-                               .`    /////|
-                             .`     //////|
-                           .`      ///////|
-                         .`       ////////|
-                       .`        /////////|
-                     .`         //////////|
-                   .`          ///////////|
-                 .`           ////////////|
-               .`            /////////////|
-             .`             //////////////|
-           .`              ///////////////|
-         .`               ////////////////|
-       .`                /////////////////|
-     .`                 //////////////////|
-   .`                  ///////////////////|
- .`___________________////////////////////|
- `7###################\///////////////////|
-   `7##################\//////////////////|
-     `7#################\/////////////////|
-       `7################\////////////////|
-         `7###############\///////////////|
-           `7##############\//////////////|
-             `7#############\/////////////|
-               `7############\////////////|
-                 `7###########\///////////|
-                   `7##########\//////////|
-                     `7#########\/////////|
-                       `7########\////////|
-                         `7#######\///////|
-                           `7######\//////|
-                             `7#####\/////|
-                               `7####\////|
-                                 `7###\///|
-                                   `7##\//|
-                                     `7#\/|
-                                       `7\|
-                                         \|
+                                         <button onclick="previmage()">/|</button>
+                                       <button onclick="previmage()">.`/|</button>
+                                     <button onclick="previmage()">.` //|</button>
+                                   <button onclick="previmage()">.`  ///|</button>
+                                 <button onclick="previmage()">.`   ////|</button>
+                               <button onclick="previmage()">.`    /////|</button>
+                             <button onclick="previmage()">.`     //////|</button>
+                           <button onclick="previmage()">.`      ///////|</button>
+                         <button onclick="previmage()">.`       ////////|</button>
+                       <button onclick="previmage()">.`        /////////|</button>
+                     <button onclick="previmage()">.`         //////////|</button>
+                   <button onclick="previmage()">.`          ///////////|</button>
+                 <button onclick="previmage()">.`           ////////////|</button>
+               <button onclick="previmage()">.`            /////////////|</button>
+             <button onclick="previmage()">.`             //////////////|</button>
+           <button onclick="previmage()">.`              ///////////////|</button>
+         <button onclick="previmage()">.`               ////////////////|</button>
+       <button onclick="previmage()">.`                /////////////////|</button>
+     <button onclick="previmage()">.`                 //////////////////|</button>
+   <button onclick="previmage()">.`                  ///////////////////|</button>
+ <button onclick="previmage()">.`___________________////////////////////|</button>
+ <button onclick="previmage()">`7###################\///////////////////|</button>
+   <button onclick="previmage()">`7##################\//////////////////|</button>
+     <button onclick="previmage()">`7#################\/////////////////|</button>
+       <button onclick="previmage()">`7################\////////////////|</button>
+         <button onclick="previmage()">`7###############\///////////////|</button>
+           <button onclick="previmage()">`7##############\//////////////|</button>
+             <button onclick="previmage()">`7#############\/////////////|</button>
+               <button onclick="previmage()">`7############\////////////|</button>
+                 <button onclick="previmage()">`7###########\///////////|</button>
+                   <button onclick="previmage()">`7##########\//////////|</button>
+                     <button onclick="previmage()">`7#########\/////////|</button>
+                       <button onclick="previmage()">`7########\////////|</button>
+                         <button onclick="previmage()">`7#######\///////|</button>
+                           <button onclick="previmage()">`7######\//////|</button>
+                             <button onclick="previmage()">`7#####\/////|</button>
+                               <button onclick="previmage()">`7####\////|</button>
+                                 <button onclick="previmage()">`7###\///|</button>
+                                   <button onclick="previmage()">`7##\//|</button>
+                                     <button onclick="previmage()">`7#\/|</button>
+                                       <button onclick="previmage()">`7\|</button>
+                                         <button onclick="previmage()">\|</button>
 
   </div>
   <div id="right">  
