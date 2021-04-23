@@ -61,7 +61,7 @@
         document.getElementById("main").style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
         
-        history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"n="+n);
+        history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e);
      }
 
 
@@ -80,14 +80,12 @@
      function nextimage(){
         n=n+1;
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
-        history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"n="+n);
      }
      function previmage(){
         if(n>1){
           n=n-1;
         }
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
-        history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"n="+n);
      }
     </script>
  </head>
@@ -258,7 +256,6 @@
   }else{
     n=1;
   }
-  document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
   env(e);
 </script>
 </body>
