@@ -67,16 +67,6 @@
 
 
 
-     function changetxt(n){
-	for (i = 0; i < totaltexts; i++) {
-           if (n!==i){
-	          document.getElementById("text"+i.toString()).style.display = "none";
-	       }else{
-              document.getElementById("text"+i.toString()).style.display = "";
-           }
-        } 
-     }
-
      function nextimage(){
         n=n+1;
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
