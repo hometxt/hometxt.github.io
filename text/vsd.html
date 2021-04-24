@@ -63,8 +63,8 @@
         maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8","#4dff00","#900000"][select];
         edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2","#bfff00","#292929"][select];
         document.getElementById("edge").style.backgroundColor = edgecolor;
-        document.getElementById("main").style.backgroundColor = maincolor;
-        document.getElementById("main").style.color = txtcolor;
+        document.getElementById("page"+i.toString())).style.backgroundColor = maincolor;
+        document.getElementById("page"+i.toString())).style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
         
         history.replaceState({ additionalInformation: ':)' },":D" , "vsd?e="+e);
@@ -190,7 +190,13 @@
   if(params.has('e')){
     e=params.get('e');
   }else{
-    e="plain"
+    e="plain";
+
+  }
+  if(params.has('n')){
+    n=parseInt(params.get('n'));
+  }else{
+    n=0;
 
   }
   env(e);
