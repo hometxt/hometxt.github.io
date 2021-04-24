@@ -67,7 +67,7 @@
         document.getElementById("page"+p.toString()).style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
         
-        history.replaceState({ additionalInformation: ':)' },":D" , "vsd?e="+e+"&p="+p.toString());
+        history.replaceState({ additionalInformation: ':)' },":D" , "vsd?e="+e+"&p="+p);
      }
 
 
@@ -81,6 +81,8 @@
               document.getElementById("page"+i.toString()).style.display = "";
            }
         } 
+        p=n;
+        env(e);
      }
     </script>
  </head>
@@ -342,6 +344,8 @@ ______                   ```--..__    `-.   |                                   
 
 </div>
 <script>
+
+  e=0;
   urlin=window.location.search;
   params = new URLSearchParams(urlin);
   if(params.has('e')){
@@ -350,15 +354,12 @@ ______                   ```--..__    `-.   |                                   
     e="plain";
 
   }
-
   if(params.has('p')){
     p=parseInt(params.get('p'));
   }else{
     p=0;
-
   }
   changetxt(p);
-  env(e);
 </script>
 </body>
 </html>
