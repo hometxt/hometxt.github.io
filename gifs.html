@@ -73,6 +73,7 @@
      function nextimage(){
         n=n+1;
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
+        document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
         preloadimage.src = "gfs/"+(n+1).toString()+".gif";
      }
@@ -81,6 +82,7 @@
           n=n-1;
         }
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
+        document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
         preloadimage.src = "gfs/"+(n-1).toString()+".gif";
      }
@@ -384,7 +386,7 @@
 <button onclick="nextimage()">|/F´</button>                             
 <button onclick="nextimage()">|/</button>                               
 </div>
-  <div id="center" ><img id="thegif" src="gfs/1.gif" class="center"></div>
+  <div id="center" ><img id="thegif1" src="gfs/1.gif" class="center"></div>
 </div>
                    
                    
