@@ -55,7 +55,7 @@
 
 
     <script>
-      totaltexts=9;
+      totaltexts=3;
       function env(e) {
         envs=["plain","night","ufo","bluescreen","dark","electric","seafoam","peach","electric lizard","vampire"];
         select=envs.indexOf(e);
@@ -67,17 +67,17 @@
         document.getElementById("page"+p.toString()).style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
         
-        history.replaceState({ additionalInformation: ':)' },":D" , "vsd?e="+e);
+        history.replaceState({ additionalInformation: ':)' },":D" , "vsd?e="+e+"&p="+p.toString());
      }
 
 
 
 
      function changetxt(n){
-	for (i = 0; i < totaltexts; i++) {
+	      for (i = 0; i < totaltexts; i++) {
            if (n!==i){
 	          document.getElementById("page"+i.toString()).style.display = "none";
-	       }else{
+	         }else{
               document.getElementById("page"+i.toString()).style.display = "";
            }
         } 
@@ -350,6 +350,7 @@ ______                   ```--..__    `-.   |                                   
     e="plain";
 
   }
+
   if(params.has('p')){
     p=parseInt(params.get('p'));
   }else{
