@@ -40,10 +40,11 @@
 
     <script>
       totaltexts=4;
-      function env(e) {
+      function env(name) {
         envs=["plain","night","ufo","bluescreen","dark","electric","seafoam","peach"];
+        e=name;
         select=envs.indexOf(e);
-        txtcolor=["black","#ffcfc2","#00ff00","#ffffff","#404040","#000000","#0062ff","#ffae00"][select];
+        txtcolor= ["black","#ffcfc2","#00ff00","#ffffff","#404040","#000000","#0062ff","#ffae00"][select];
         maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8"][select];
         edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2"][select];
         document.getElementById("edge").style.backgroundColor = edgecolor;
