@@ -80,6 +80,7 @@
         }
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
+        preloadimage.src = "gfs/"+(n-1).toString()+".gif";
      }
     </script>
  </head>
