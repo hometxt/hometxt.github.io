@@ -48,14 +48,15 @@
         edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2"][select];
         document.getElementById("edge").style.backgroundColor = edgecolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
-        if(select=4){
-          select=8;
-        }
+        
         if(select>4){
 
           select=0;
           document.getElementById("main").style.backgroundColor = maincolor;
           document.getElementById("main").style.color = txtcolor;
+        }
+        if(select=4){
+          select=8;
         }
         changetxt(select);
 
