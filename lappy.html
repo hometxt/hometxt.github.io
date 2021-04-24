@@ -39,7 +39,7 @@
 
 
     <script>
-      totaltexts=3;
+      totaltexts=4;
       function env(e) {
         envs=["plain","night","ufo","bluescreen","dark","electric","seafoam","peach"];
         select=envs.indexOf(e);
@@ -47,7 +47,7 @@
         maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8"][select];
         edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2"][select];
         document.getElementById("edge").style.backgroundColor = edgecolor;
-        for(i=0;i<3;i++){
+        for(i=0;i<totaltexts;i++){
               document.getElementById("text"+i.toString()).style.backgroundColor = maincolor;
               document.getElementById("text"+i.toString()).style.color = txtcolor;
         }
@@ -88,25 +88,25 @@
                                                                                                                                                                                                                                               <button onclick="changetxt(2)">|    /\    |</button>                           
                                                                                                                                                                                                                                               <button onclick="changetxt(2)">|   /  \   |</button>
                                                                                                                                                                                                                                               <button onclick="changetxt(2)">|   `--´   |</button>       
-                        <a href="videos"> _______.----.</a>                                                                                                                                                                                                        <button onclick="changetxt(2)">|__________|</button>                                       
-                        <a href="videos">|____.-----. |</a>                                                                                                                                                                                                                    
-                       <a href="videos">|            ||</a>                                                                                                                                                                                                           <button onclick="changetxt(2)">Colors</button>   
-                       <a href="videos">|            ||</a>
-                       <a href="videos">|            ||</a>
-                       <a href="videos">|____________|</a>
+                        <button onclick="changetxt(3)"> _______.----.</button>                                                                                                                                                                                                        <button onclick="changetxt(2)">|__________|</button>                                       
+                        <button onclick="changetxt(3)">|____.-----. |</button>                                                                                                                                                                                                                    
+                       <button onclick="changetxt(3)">|            ||</button>                                                                                                                                                                                                           <button onclick="changetxt(2)">Colors</button>   
+                       <button onclick="changetxt(3)">|    `..´    ||</button>
+                       <button onclick="changetxt(3)">|    .´`.    ||</button>
+                       <button onclick="changetxt(3)">|____________|</button>
 
-                           <a href="videos">Videos</a>
+                           <button onclick="changetxt(3)">Videos</button>
 
 
 
-                                                                                                                                                                                <a href="music" onclick="location.href=this.href+'?e='+e;return false;">_______.----.</a>  
-                                                                                                                                                                               <a href="music" onclick="location.href=this.href+'?e='+e;return false;">|____.-----. |</a>
-                                                                                                                                                                              <a href="music" onclick="location.href=this.href+'?e='+e;return false;">|            ||</a>
-                                                                                                                                                                              <a href="music" onclick="location.href=this.href+'?e='+e;return false;">|            ||</a>
-                                                                                                                                                                              <a href="music" onclick="location.href=this.href+'?e='+e;return false;">|            ||</a>
-                                                                                                                                                                              <a href="music" onclick="location.href=this.href+'?e='+e;return false;">|____________|</a>
+                                                                                                                                                                                <button onclick="changetxt(3)">_______.----.</button> 
+                                                                                                                                                                               <button onclick="changetxt(3)">|____.-----. |</button>
+                                                                                                                                                                              <button onclick="changetxt(3)">|            ||</button>
+                                                                                                                                                                              <button onclick="changetxt(3)">|    `..´    ||</button>
+                                                                                                                                                                              <button onclick="changetxt(3)">|    .´`.    ||</button>
+                                                                                                                                                                              <button onclick="changetxt(3)">|____________|</button>
                                                                                                                                     
-                                                                                                                                                                                   <a href="music" onclick="location.href=this.href+'?e='+e;return false;">Music</a>
+                                                                                                                                                                                   <button onclick="changetxt(3)">Music</button>
 
 
                                                                                                                                     
@@ -129,7 +129,7 @@
                                                                                                                                           <a href="text" onclick="location.href=this.href+'?e='+e;return false;">|            ||</a>
                                                                                                                                           <a href="text" onclick="location.href=this.href+'?e='+e;return false;">|____________|</a>   
 
-                                                                                                                                               <a href="text" onclick="location.href=this.href+'?e='+e;return false;"">Text</a>   
+                                                                                                                                               <a href="text" onclick="location.href=this.href+'?e='+e;return false;">Text</a>   
 
 
 
@@ -138,14 +138,14 @@
 
 
 
-                                                                <a href="torrent">_______.----.</a>  
-                                                               <a href="torrent">|____.-----. |</a>
-                                                              <a href="torrent">|            ||</a>                                                                                                                                               <button onclick="changetxt(1)">______________</button>
-                                                              <a href="torrent">|            ||</a>                                                                                                                                              <button onclick="changetxt(1)">|`-.        .-´|</button>  
-                                                              <a href="torrent">|            ||</a>                                                                                                                                              <button onclick="changetxt(1)">|   `-.  .-´   |</button>
-                                                              <a href="torrent">|____________|</a>                                                                                                                                               <button onclick="changetxt(1)">|      `´      |</button>
+                                                               <button onclick="changetxt(3)"> _______.----.</button>  
+                                                               <button onclick="changetxt(3)">|____.-----. |</button>
+                                                              <button onclick="changetxt(3)">|            ||</button>                                                                                                                                               <button onclick="changetxt(1)">______________</button>
+                                                              <button onclick="changetxt(3)">|    `..´    ||</button>                                                                                                                                              <button onclick="changetxt(1)">|`-.        .-´|</button>  
+                                                              <button onclick="changetxt(3)">|    .´`.    ||</button>                                                                                                                                              <button onclick="changetxt(1)">|   `-.  .-´   |</button>
+                                                              <button onclick="changetxt(3)">|____________|</button>                                                                                                                                               <button onclick="changetxt(1)">|      `´      |</button>
                                                                                                                                                                                                                            <button onclick="changetxt(1)">|              |</button>                                 
-                                                                 <a href="torrent">Torrents</a>                                                                                                                                                  <button onclick="changetxt(1)">'--------------'</button>  
+                                                                 <button onclick="changetxt(3)">Torrents</a>                                                                                                                                                  <button onclick="changetxt(1)">'--------------'</button>  
                                                                                                                                                                                                                          
                                                                                                                                                                                                                                  <button onclick="changetxt(1)">Mail</button>
                                                                   
@@ -165,15 +165,15 @@
 
 
 
-                                                                                                                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                               __________                                
-                                                                                                                                                                                                                                              |          |                                               
-                                                                                                                                                                                                                                              |    /\    |                    
-                                                                                                                                                                                                                                              |   /  \   |                                                         
-                                                                                                                                                                                                                                              |   `--´   |                                                       
-                         _______.----.                                                                                                                                                                                                        |__________|                      
-                        |____.-----. |                                                                                                                                                                                                                                                                                        
-                       |            ||                                                                                                                                                                                                           Colors                                                                                                                                           
+                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                               __________ 
+                                                                                                                                                                                                                                              |          |
+                                                                                                                                                                                                                                              |    /\    |
+                                                                                                                                                                                                                                              |   /  \   |
+                                                                                                                                                                                                                                              |   `--´   |
+                         _______.----.                                                                                                                                                                                                        |__________|
+                        |____.-----. |                                                                                                                                                                                                                   
+                       |            ||                                                                                                                                                                                                           Colors  
                        |            ||
                        |            ||
                        |____________|
@@ -197,12 +197,12 @@
                                                                        |                                                                                                                             |
                                                                        |                                                                                                                             |
                                                                        |                                                                                                                             |
+                                                                       |                                                                                                                             |      
+                                                                       |                                                                                                                             |
                                                                        |                                             .                                                                               |
                                                                        |                                            / \                                                                              |
-                                                                       |                                           / ! \       Dont email me yet :O                                                  |
-                                                                       |                                          /_____\                                                                            |
-                                                                       |                                                                                                                             |      
-                                                                       |                                                                                                                             |      
+                                                                       |                                           / ! \       Don't email me yet! :()                                               |
+                                                                       |                                          /_____\                                                                            |      
                                                                        |                                                                                                                             |     
                                                                        |                                                                                                                             |     
                                                                        |                                                                                                                             |                                      
@@ -243,15 +243,15 @@
 
 
 
-                                                                                                                                                                                                                                                                                                                                                      
-                                                                                                                                                                                                                                               __________                                
-                                                                                                                                                                                                                                              |          |                                               
-                                                                                                                                                                                                                                              |    /\    |                    
-                                                                                                                                                                                                                                              |   /  \   |                                                         
-                                                                                                                                                                                                                                              |   `--´   |                                                       
-                         _______.----.                                                                                                                                                                                                        |__________|                      
-                        |____.-----. |                                                                                                                                                                                                                                                                                        
-                       |            ||                                                                                                                                                                                                           Colors                                                                                                                                           
+                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                               __________ 
+                                                                                                                                                                                                                                              |          |
+                                                                                                                                                                                                                                              |    /\    |
+                                                                                                                                                                                                                                              |   /  \   |
+                                                                                                                                                                                                                                              |   `--´   |
+                         _______.----.                                                                                                                                                                                                        |__________|
+                        |____.-----. |                                                                                                                                                                                                                    
+                       |            ||                                                                                                                                                                                                           Colors 
                        |            ||
                        |            ||
                        |____________|
@@ -269,7 +269,7 @@
                                                                                                                                     
                                                                                                                                                                                    Music
                                                                         _____________________________________________________________________________________________________________________________
-                                                                       |<button onclick="changetxt(0)">(X)</button>                                                         Mail                                                             |                                                                       
+                                                                       |<button onclick="changetxt(0)">(X)</button>                                                        Colors                                                            |                                                                       
                                                                        |-----------------------------------------------------------------------------------------------------------------------------|                                                
                                                                        |                                                                                                                             |
                                                                        |                                                                                                                             |
@@ -278,10 +278,88 @@
                                                                        |                                                                                                                             |
                                                                        |                                                                                                                             |
                                                                        |                                                                                                                             |
-                                                                       |                          <button onclick="drop('plain')" style="color:#000000; background-color:white"> /\ </button>     <button onclick="drop('night')" style="color:#ffcfc2; background-color:#1b0f2b"> /\ </button>     <button onclick="drop('ufo')" style="color:#00ff00; background-color:#000000"> /\ </button>     <button onclick="drop('dark')" style="color:#404040; background-color:#000000"> /\ </button>     <button onclick="drop('bluescreen')" style="color:#ffffff; background-color:#0000ff"> /\ </button>     <button onclick="drop('electric')" style="color:#000000; background-color:#ffff00"> /\ </button>     <button onclick="drop('seafoam')" style="color:#0062ff; background-color:#00ffa6"> /\ </button>     <button onclick="drop('peach')" style="color:#ffae00; background-color:#fceae8"> /\ </button>                                    |
-                                                                       |                          <button onclick="drop('plain')" style="color:#000000; background-color:white">/  \</button>     <button onclick="drop('night')" style="color:#ffcfc2; background-color:#1b0f2b">/  \</button>     <button onclick="drop('ufo')" style="color:#00ff00; background-color:#000000">/  \</button>     <button onclick="drop('dark')" style="color:#404040; background-color:#000000">/  \</button>     <button onclick="drop('bluescreen')" style="color:#ffffff; background-color:#0000ff">/  \</button>     <button onclick="drop('electric')" style="color:#000000; background-color:#ffff00">/  \</button>     <button onclick="drop('seafoam')" style="color:#0062ff; background-color:#00ffa6">/  \</button>     <button onclick="drop('peach')" style="color:#ffae00; background-color:#fceae8">/  \</button>                                    |
-                                                                       |                          <button onclick="drop('plain')" style="color:#000000; background-color:white">`--´</button>     <button onclick="drop('night')" style="color:#ffcfc2; background-color:#1b0f2b">`--´</button>     <button onclick="drop('ufo')" style="color:#00ff00; background-color:#000000">`--´</button>     <button onclick="drop('dark')" style="color:#404040; background-color:#000000">`--´</button>     <button onclick="drop('bluescreen')" style="color:#ffffff; background-color:#0000ff">`--´</button>     <button onclick="drop('electric')" style="color:#000000; background-color:#ffff00">`--´</button>     <button onclick="drop('seafoam')" style="color:#0062ff; background-color:#00ffa6">`--´</button>     <button onclick="drop('peach')" style="color:#ffae00; background-color:#fceae8">`--´</button>                                     |
-                                                                       |
+                                                                       |                             <button onclick="drop('plain')" style="color:#000000; background-color:white"> /\ </button>     <button onclick="drop('night')" style="color:#ffcfc2; background-color:#1b0f2b"> /\ </button>     <button onclick="drop('ufo')" style="color:#00ff00; background-color:#000000"> /\ </button>     <button onclick="drop('dark')" style="color:#404040; background-color:#000000"> /\ </button>     <button onclick="drop('bluescreen')" style="color:#ffffff; background-color:#0000ff"> /\ </button>     <button onclick="drop('electric')" style="color:#000000; background-color:#ffff00"> /\ </button>     <button onclick="drop('seafoam')" style="color:#0062ff; background-color:#00ffa6"> /\ </button>     <button onclick="drop('peach')" style="color:#ffae00; background-color:#fceae8"> /\ </button>                             |
+                                                                       |                             <button onclick="drop('plain')" style="color:#000000; background-color:white">/  \</button>     <button onclick="drop('night')" style="color:#ffcfc2; background-color:#1b0f2b">/  \</button>     <button onclick="drop('ufo')" style="color:#00ff00; background-color:#000000">/  \</button>     <button onclick="drop('dark')" style="color:#404040; background-color:#000000">/  \</button>     <button onclick="drop('bluescreen')" style="color:#ffffff; background-color:#0000ff">/  \</button>     <button onclick="drop('electric')" style="color:#000000; background-color:#ffff00">/  \</button>     <button onclick="drop('seafoam')" style="color:#0062ff; background-color:#00ffa6">/  \</button>     <button onclick="drop('peach')" style="color:#ffae00; background-color:#fceae8">/  \</button>                             |
+                                                                       |                             <button onclick="drop('plain')" style="color:#000000; background-color:white">`--´</button>     <button onclick="drop('night')" style="color:#ffcfc2; background-color:#1b0f2b">`--´</button>     <button onclick="drop('ufo')" style="color:#00ff00; background-color:#000000">`--´</button>     <button onclick="drop('dark')" style="color:#404040; background-color:#000000">`--´</button>     <button onclick="drop('bluescreen')" style="color:#ffffff; background-color:#0000ff">`--´</button>     <button onclick="drop('electric')" style="color:#000000; background-color:#ffff00">`--´</button>     <button onclick="drop('seafoam')" style="color:#0062ff; background-color:#00ffa6">`--´</button>     <button onclick="drop('peach')" style="color:#ffae00; background-color:#fceae8">`--´</button>                             |
+                                                                       |                                                                                                                             |
+                                                                       |                                                                                                                             |     
+                                                                       |                                                                                                                             |     
+                                                                       |                                                                                                                             |                                           
+                                                                       |                                                                                                                             |                                                   
+                                                                       |                                                                                                                             |    
+                                                                       |                                                                                                                             |                                                       
+                                                                       |_____________________________________________________________________________________________________________________________|                                                       
+
+                                                                                                                                               Text   
+
+
+
+
+
+
+
+
+                                                                _______.----.  
+                                                               |____.-----. |
+                                                              |            ||                                                                                                                                               ______________
+                                                              |            ||                                                                                                                                              |`-.        .-´|  
+                                                              |            ||                                                                                                                                              |   `-.  .-´   |
+                                                              |____________|                                                                                                                                               |      `´      |
+                                                                                                                                                                                                                           |              |                                 
+                                                                 Torrents                                                                                                                                                  '--------------'  
+                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                 Mail
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+
+
+</div>
+<div id="text3" style="width:1080px;line-height: 1;white-space:pre; auto; background-color:white;min-height:100vh;margin-right: auto; margin-left:auto;">
+
+
+
+                                                                                                                                                                                                                       
+                                                                                                                                                                                                                                               __________ 
+                                                                                                                                                                                                                                              |          |
+                                                                                                                                                                                                                                              |    /\    |
+                                                                                                                                                                                                                                              |   /  \   |
+                                                                                                                                                                                                                                              |   `--´   |
+                         _______.----.                                                                                                                                                                                                        |__________|
+                        |____.-----. |                                                                                                                                                                                                                   
+                       |            ||                                                                                                                                                                                                           Colors  
+                       |            ||
+                       |            ||
+                       |____________|
+
+                           Videos
+
+
+
+                                                                                                                                                                                _______.----.  
+                                                                                                                                                                               |____.-----. |
+                                                                                                                                                                              |            ||
+                                                                                                                                                                              |            ||
+                                                                                                                                                                              |            ||
+                                                                                                                                                                              |____________|
+                                                                                                                                    
+                                                                                                                                                                                   Music
+                                                                        _____________________________________________________________________________________________________________________________
+                                                                       |<button onclick="changetxt(0)">(X)</button>                                                   Under Construction                                                     |                                                                       
+                                                                       |-----------------------------------------------------------------------------------------------------------------------------|                                                
+                                                                       |                                                                                                                             |
+                                                                       |                                                                                                                             |
+                                                                       |                                                                                                                             |
+                                                                       |                                                                                                                             |
+                                                                       |                                                                                                                             |      
+                                                                       |                                                                                                                             |
+                                                                       |                                             .                                                                               |
+                                                                       |                                            / \                                                                              |
+                                                                       |                                           / ! \       Under Construction...                                                 |
+                                                                       |                                          /_____\                                                                            |      
                                                                        |                                                                                                                             |     
                                                                        |                                                                                                                             |     
                                                                        |                                                                                                                             |                                      
