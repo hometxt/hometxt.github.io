@@ -49,6 +49,7 @@
 
 
     <script>
+      totalgifs=100;
       totaltexts=9;
       var preloadimage=new Image();
       function env(e) {
@@ -71,9 +72,13 @@
 
 
      function nextimage(){
-        n=n+1;
+        if(n<totalgifs){
+          n=n+1;
+        }
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
+        document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
+        document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
         preloadimage.src = "gfs/"+(n+1).toString()+".gif";
      }
@@ -84,6 +89,8 @@
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
+        document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
+        document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
         preloadimage.src = "gfs/"+(n-1).toString()+".gif";
      }
 
@@ -244,7 +251,7 @@
                               ________________________________________________________________________________________________________________________________________
                              /                                                                                                                                        \
                             /                                                                                                                                          \
-                           /                                                                                                                                            \
+                           /                                                                <span id="counter">         </span>                                                                   \
                           /                                                                                                                                              \
                          /________________________________________________________________________________________________________________________________________________\                         
 
@@ -398,7 +405,7 @@
                               ________________________________________________________________________________________________________________________________________
                              /                                                                                                                                        \
                             /                                                                                                                                          \
-                           /                                                                                                                                            \
+                           /                                                                <span id="dropcounter">         </span>                                                                   \
                           /                                                                                                                                              \
                          /________________________________________________________________________________________________________________________________________________\                         
 
@@ -427,6 +434,9 @@
   }
   document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
   document.getElementById("dropmenu").style.display = "none";
+
+  document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
+  document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
   env(e);
 </script>
 </body>
