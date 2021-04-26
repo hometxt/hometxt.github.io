@@ -109,10 +109,40 @@
         env(e);
 
      }
+
+     function tile(){
+        document.getElementById("tiled").style.display = "";
+        str="url('gfs/"+(n).toString()+".gif')";
+        document.getElementById("tiled").style.backgroundImage = str;
+        document.getElementById("dropmenu").style.display = "none";
+        document.getElementById("main").style.display = "none";
+
+     }
+
+     function untile(){
+        document.getElementById("tiled").style.display = "none";
+        document.getElementById("dropmenu").style.display = "none";
+        document.getElementById("zoomed").style.display = "none";
+        document.getElementById("main").style.display = "";
+     }
+     function zoom(){
+        document.getElementById("zoomed").style.display = "";
+
+
+        document.getElementById('biggif').src="gfs/"+n.toString()+".gif";
+        document.getElementById("dropmenu").style.display = "none";
+        document.getElementById("main").style.display = "none";
+     }
     </script>
  </head>
 
 <body id="edge"  style="background-color:#f7feff;margin:0; padding:0;-webkit-appearance: none;-moz-appearance: none;appearance: none;">
+<div id="tiled" onclick='untile()' style=" height: 100vh; background-image: url('gfs/1.gif'); ">
+</div>
+
+<div id="zoomed" onclick='untile()'  style=" height: 100vh; text-align:center;">
+<img id="biggif" src="gfs/1.gif"  style="height: 100vh;">
+</div>
 
 <div id="main" style="width:1080px;line-height: 1;white-space:pre; auto; background-color:white;min-height:100vh;margin-right: auto; margin-left:auto;">
                                                                                                                                                                          
@@ -251,7 +281,7 @@
                               ________________________________________________________________________________________________________________________________________
                              /                                                                                                                                        \
                             /                                                                                                                                          \
-                           /                                                                <span id="counter">         </span>                                                                   \
+                           /           <button onclick="tile()">:::</button>                                                 <span id="counter">         </span>                                                      <button onclick="zoom()">&lt; &gt;</button>           \
                           /                                                                                                                                              \
                          /________________________________________________________________________________________________________________________________________________\                         
 
@@ -405,7 +435,7 @@
                               ________________________________________________________________________________________________________________________________________
                              /                                                                                                                                        \
                             /                                                                                                                                          \
-                           /                                                                <span id="dropcounter">         </span>                                                                   \
+                           /           <button onclick="tile()">:::</button>                                                 <span id="counter">         </span>                                                      <button onclick="zoom()">&lt; &gt;</button>           \
                           /                                                                                                                                              \
                          /________________________________________________________________________________________________________________________________________________\                         
 
@@ -433,7 +463,7 @@
     n=1;
   }
   document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
-  document.getElementById("dropmenu").style.display = "none";
+  untile();
 
   document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
   document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
