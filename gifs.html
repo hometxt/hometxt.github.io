@@ -64,7 +64,6 @@
         document.getElementById("dropmenu").style.backgroundColor = maincolor;
         document.getElementById("dropmenu").style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
-        
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
      }
 
@@ -451,8 +450,8 @@
     n=1;
   }
   document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
-  env(e);
   untile();
+  env(e);
   document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
   document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
 </script>
