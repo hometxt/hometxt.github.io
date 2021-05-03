@@ -74,10 +74,10 @@
         if(n<totalgifs){
           n=n+1;
         }
-        img.style.visibility = 'hidden';
+        document.getElementById('thegif').style.visibility = 'hidden';
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
-        img.style.visibility = 'visible';
+        document.getElementById('thegif').style.visibility = 'visible';
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
         document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
         document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
