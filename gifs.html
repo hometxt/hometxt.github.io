@@ -71,10 +71,11 @@
 
 
      function nextimage(){
+        document.getElementById('thegif').style.visibility = "hidden";
+        document.getElementById('thegif1').style.visibility = "hidden";
         if(n<totalgifs){
           n=n+1;
         }
-        document.getElementById('thegif').style.visibility = "hidden";
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif').style.visibility = "visible";
