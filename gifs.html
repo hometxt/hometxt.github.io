@@ -71,14 +71,11 @@
 
 
      function nextimage(){
-        document.getElementById('thegif').style.visibility = "hidden";
-        document.getElementById('thegif1').style.visibility = "hidden";
         if(n<totalgifs){
           n=n+1;
         }
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
-        document.getElementById('thegif').style.visibility = "visible";
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
         document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
         document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
