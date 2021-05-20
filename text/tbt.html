@@ -67,7 +67,7 @@
         document.getElementById("page"+p.toString()).style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
         
-        history.replaceState({ additionalInformation: ':)' },":D" , "tbt?e="+e+"&p="+p+"&l="+l);
+        history.replaceState({ additionalInformation: ':)' },":D" , "tbt?e="+e+"&p="+l);
      }
 
 
@@ -1342,14 +1342,14 @@ __________                        ``---._<button onclick="prevpage()">`-. \   |<
                                          |                                                                                                                   |    |                                                                       
                                          |                                                                                                                   |    |                                                                       
                                          |                                                                                                                   |    |                                                                       
-                                         |                                                 <a href="" onclick="location.href=this.href+'?e='+e;return false;">_______________</a>                                                   |    |                                                                       
-                                         |                                                <a href="" onclick="location.href=this.href+'?e='+e;return false;">|               |</a>                                                  |    |                                                                       
-                                         |                                                <a href="" onclick="location.href=this.href+'?e='+e;return false;">|       .   ( ) |</a>                                                  |    |                                                                       
-                                         |                                                <a href="" onclick="location.href=this.href+'?e='+e;return false;">|     .´ `.     |</a>                                                  |    |                                                                       
-                                         |                                                <a href="" onclick="location.href=this.href+'?e='+e;return false;">|   .´     `.   |</a>                                                  |    |                                                                                   
-                                         |                                                <a href="" onclick="location.href=this.href+'?e='+e;return false;">|  ´| []    |`  |</a>                                                  |    |                                                                       
-                                         |                                                <a href="" onclick="location.href=this.href+'?e='+e;return false;">|---|       |---|</a>                                                  |    |                                                                       
-                                         |                                                <a href="" onclick="location.href=this.href+'?e='+e;return false;">|_______________|</a>                                                  |    |                                                                       
+                                         |                                                 <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">_______________</a>                                                   |    |                                                                       
+                                         |                                                <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">|               |</a>                                                  |    |                                                                       
+                                         |                                                <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">|       .   ( ) |</a>                                                  |    |                                                                       
+                                         |                                                <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">|     .´ `.     |</a>                                                  |    |                                                                       
+                                         |                                                <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">|   .´     `.   |</a>                                                  |    |                                                                                   
+                                         |                                                <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">|  ´| []    |`  |</a>                                                  |    |                                                                       
+                                         |                                                <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">|---|       |---|</a>                                                  |    |                                                                       
+                                         |                                                <a href="hometxt.github.io" onclick="location.href=this.href+'?e='+e;return false;">|_______________|</a>                                                  |    |                                                                       
                                          |                                                                                                                   |    |                                                                       
                                          |                                                                                                                   |    |                                                                       
                                          |                                                                                                                   |    |                                                                       
@@ -1404,13 +1404,10 @@ __________                        ``---._<button onclick="prevpage()">`-. \   |<
     e="plain";
 
   }
+  p=1;
+  //last minute change to p in the url
   if(params.has('p')){
-    p=parseInt(params.get('p'));
-  }else{
-    p=1;
-  }
-  if(params.has('l')){
-    l=parseInt(params.get('l'));
+    l=parseInt(params.get('p'));
   }else{
     l=0;
   }
