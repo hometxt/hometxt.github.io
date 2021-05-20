@@ -119,14 +119,14 @@
               itend=!gl[0].indexOf("\</i\>")==-1;
               if(itstart && !itend){
                 italics=true;
-                document.getElementById(style+"line"+i).innerHTML ="see"+gl[0]+"\</i\>";
+                document.getElementById(style+"line"+i).innerHTML =gl[0]+"\</i\>";
               }else if(itend && !itstart){
                 italics=false;
-                document.getElementById(style+"line"+i).innerHTML = "\<i\>"+gl[0]+"wjkjkjnkjnkj";
+                document.getElementById(style+"line"+i).innerHTML = "\<i\>"+gl[0];
               }else if(italics){
-                document.getElementById(style+"line"+i).innerHTML = "\<i\>"+gl[0]+"\</i\>"+"dee";
+                document.getElementById(style+"line"+i).innerHTML = "\<i\>"+gl[0]+"\</i\>";
               }else{
-                document.getElementById(style+"line"+i).innerHTML = gl[0]+"deeed"; 
+                document.getElementById(style+"line"+i).innerHTML = gl[0]; 
               }
             }  
           }
