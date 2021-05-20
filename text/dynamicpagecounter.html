@@ -139,8 +139,6 @@
 
      function getline(loc){
       line=wholetext.substring(loc, loc+linelength+7);
-      breakpoint=line.indexOf("\r");
-      breakpoint2=line.indexOf("\n");
       itstart=line.indexOf("\<i\>");
       itend=line.indexOf("\</i\>");
       textlen=linelength;
@@ -162,6 +160,8 @@
         trim=trim+4;  
       }
       line=line.substring(0, linelength+trim);
+      breakpoint=line.indexOf("\r");
+      breakpoint2=line.indexOf("\n");
 
 
       if(breakpoint!=-1 && breakpoint2!=-1 ){
