@@ -115,12 +115,12 @@
               document.getElementById(style+"line"+i).innerHTML = blankline;
             }else{
 
-              itstart=!gl[0].indexOf("\<i\>")==-1;
-              itend=!gl[0].indexOf("\</i\>")==-1;
-              if(itstart && !itend){
+              itstart=gl[0].indexOf("\<i\>")==-1;
+              itend=gl[0].indexOf("\</i\>")==-1;
+              if(!itstart && itend){
                 italics=true;
                 document.getElementById(style+"line"+i).innerHTML =gl[0]+"\</i\>";
-              }else if(itend && !itstart){
+              }else if(!itend && itstart){
                 italics=false;
                 document.getElementById(style+"line"+i).innerHTML = "\<i\>"+gl[0];
               }else if(italics){
