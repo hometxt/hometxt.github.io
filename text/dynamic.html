@@ -164,6 +164,9 @@
         trim=trim+4;  
       }
       line=line.substring(0, linelength+trim);
+      if(line[0]==" "){
+        line=line.substring(1, linelength+trim);
+      }
 
 
       if(breakpoint!=-1 && breakpoint2!=-1 ){
