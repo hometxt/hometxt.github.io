@@ -195,7 +195,9 @@
 
           line=line.padEnd(linelength+trim);
       }
-      
+      if(line[0]==" "){
+        line=line.substring(1, linelength+trim)+" ";
+      }
       return [line,loc+textlen]; 
 
      }
