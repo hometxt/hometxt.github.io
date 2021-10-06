@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+ <title>The Best Timeline</title>
+ <head>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
+    <style>
+
+     
+      body {
+        font-family: 'Inconsolata', monospace;
+        font-size: 11px;
+      }
+      a:link, a:visited {
+        text-decoration: none;
+        line-height: 1;
+        white-space:pre;
+      }
+
+      button {
+        font-family: 'Inconsolata', monospace;
+        font-size: 11px;
+        background: none;
+        border: 0;
+        padding: 0;
+        line-height: 1;
+        text-decoration: none;
+        white-space:pre;
+        cursor: pointer;
+      }
+      .blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+    </style>
+    <style id="textcolor">
+       button, a:link, a:visited {color: black;}
+    </style>
+
+
+    <script>
+      x=300;
+      y=50;
+      baseline=new Array(x).fill(0);
+      baseimage=new Array(y).fill(baseline);
+
+
+
+      function env(e) {
+        envs=["plain","night","ufo","bluescreen","dark","electric","seafoam","peach","electric lizard","vampire"];
+        select=envs.indexOf(e);
+        txtcolor=["black","#ffcfc2","#00ff00","#ffffff","#404040","#000000","#0062ff","#ffae00","#00ba28","#000000"][select];
+        maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8","#4dff00","#900000"][select];
+        edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2","#bfff00","#292929"][select];
+        document.getElementById("edge").style.backgroundColor = edgecolor;
+        document.getElementById("page"+p.toString()).style.backgroundColor = maincolor;
+        document.getElementById("page"+p.toString()).style.color = txtcolor;
+        document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
+        
+        history.replaceState({ additionalInformation: ':)' },":D" , "tbt?e="+e+"&p="+l);
+     }
+
+
+
+     function freshforest(){
+      trees=50;
+      types=10;
+      for(i=1; i<trees; i++){
+        baseimage[floor(Math.random(x))][floor(Math.random(y))]=floor(Math.random(types));
+      }
+
+     }
+
+     
+
+     function display(){
+            document.getElementById("image").innerHTML = "aaaa";
+     }
+
+
+    </script>
+ </head>
+
+<body id="edge"  style="background-color:#f7feff;margin:0; padding:0;-webkit-appearance: none;-moz-appearance: none;appearance: none;">
+
+
+<script>
+
+  //bookdisplay(0,1);
+  display();
+  e=0;
+  l=0;
+  urlin=window.location.search;
+  params = new URLSearchParams(urlin);
+  if(params.has('e')){
+    e=params.get('e');
+  }else{
+    e="plain";
+
+  }
+  p=1;
+  //last minute change to p in the url
+  if(params.has('p')){
+    l=parseInt(params.get('p'));
+  }else{
+    l=0;
+  }
+  display();
+ // changetxt(p);
+</script>
+<span id="image">dxs</span>
+
+sdjgdskvd
+</body>
+</html>
