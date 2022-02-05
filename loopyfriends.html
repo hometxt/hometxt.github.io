@@ -51,11 +51,11 @@
 
 
     <script>
-      totalgifs=413;
+      totalgifs=8;
       var preloadimage=new Image();
       function env(e) {
-        envs=["plain","night","ufo","bluescreen","dark","electric","seafoam","peach","electric lizard","vampire"];
-	      select=envs.indexOf(e);
+        envs=["Loud Cloud Puffin Proud","Meme Lord Hollow Gourd","Rave Saver Dave Mushroom","Third Eye Wise Guy","Big Blossom Come And Get Some","Math Alien Hyper Sapien","Bliss Mistress Kiss Paradise","Stone Starer Star Stepper"];
+	      select=e;
         txtcolor=["black","#ffcfc2","#00ff00","#ffffff","#404040","#000000","#0062ff","#ffae00","#00ba28","#000000"][select];
         maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8","#4dff00","#900000"][select];
         edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2","#bfff00","#292929"][select];
@@ -65,7 +65,7 @@
         document.getElementById("dropmenu").style.backgroundColor = maincolor;
         document.getElementById("dropmenu").style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
-        history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
+        history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
      }
 
 
@@ -74,7 +74,9 @@
      function nextimage(){
         if(n<totalgifs){
           n=n+1;
+          e=e+1;
         }
+        env(e);
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
@@ -85,7 +87,9 @@
      function previmage(){
         if(n>1){
           n=n-1;
+          e=e-1;
         }
+        env(e);
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
         history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
@@ -110,31 +114,9 @@
 
      }
 
-     function tile(){
-        document.getElementById("tiled").style.display = "";
-        str="url('gfs/"+(n).toString()+".gif')";
-        document.getElementById("tiled").style.backgroundImage = str;
-        document.getElementById("dropmenu").style.display = "none";
-        document.getElementById("main").style.display = "none";
-
-     }
-
-     function untile(){
-        document.getElementById("tiled").style.display = "none";
-        document.getElementById("dropmenu").style.display = "none";
-        document.getElementById("zoomed").style.display = "none";
-        document.getElementById("main").style.display = "";
-     }
-     function zoom(){
-        document.getElementById("zoomed").style.display = "";
-        document.getElementById('biggif').src="gfs/"+n.toString()+".gif";
-        document.getElementById("dropmenu").style.display = "none";
-        document.getElementById("main").style.display = "none";
      }
     </script>
  </head>
-
-
 <div id="main" style="width:1080px;line-height: 1;white-space:pre; auto; background-color:white;min-height:100vh;margin-right: auto; margin-left:auto;">
 <div id="container">
 <div id="left"> 
@@ -232,25 +214,19 @@
 <button onclick="nextimage()">| .´</button>                             
 <button onclick="nextimage()">|/</button>                               
 </div>
-  <div id="center" ><img id="thegif" src="gfs/1.gif" class="center" ></div>
+  <div id="center" >
+    <img id="thegif" src="lfs/1.jpg" class="center" >
+
+
 </div>
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                              ________________________________________________________________________________________________________________________________________
-                             /                                                                                                                                        \
-                            /                                                                                                                                          \
-                           /           <button onclick="tile()">:::</button>                                                 <span id="counter">         </span>                                                      <button onclick="zoom()">&lt; &gt;</button>           \
-                          /                                                                                                                                              \
-                         /________________________________________________________________________________________________________________________________________________\                         
+<div class="center" >
+<audio controls loop source src="lfs/1.wav" type="audio/wav" class="center" style="width:600px">
+
+</div>
 
 
-                         
-
+</div>
+  </div>
 </div>
 <script>
   urlin=window.location.search;
@@ -259,18 +235,15 @@
   if(params.has('e')){
     e=params.get('e');
   }else{
-    e="plain";
+    e=1;
   }
   if(params.has('n')){
     n=parseInt(params.get('n'));
   }else{
     n=1;
   }
-  document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
-  untile();
+  document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
   env(e);
-  document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
-  document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
 </script>
 </body>
 </html>
