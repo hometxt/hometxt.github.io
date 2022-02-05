@@ -56,9 +56,10 @@
       function env(e) {
         envs=["Loud Cloud Puffin Proud","Meme Lord Hollow Gourd","Rave Saver Dave Mushroom","Third Eye Wise Guy","Big Blossom Come And Get Some","Math Alien Hyper Sapien","Bliss Mistress Kiss Paradise","Stone Starer Star Stepper"];
 	      select=parseInt(e);
-        txtcolor=["black","#ffcfc2","#00ff00","#ffffff","#404040","#000000","#0062ff","#ffae00","#00ba28","#000000"][select];
-        maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8","#4dff00","#900000"][select];
-        edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2","#bfff00","#292929"][select];
+        txtcolor=["black","black","black","black","black","black","black","black",][select];
+        maincolor=["#97effd","#dfe6ff","#dfe6ff","#deffe0","#deffe0","#dfe6ff","#ede4c7","#dfe6ff"][select];
+
+        document.getElementById("edge").style.backgroundColor = maincolor;
         document.getElementById("main").style.backgroundColor = maincolor;
         document.getElementById("main").style.color = txtcolor;
         document.getElementById("player").style.color = maincolor;
@@ -75,8 +76,9 @@
         }else{
           n=1;
         }
-        env(n);
+        env(n-1);
         document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
+        document.getElementById('player').src="lfs/"+n.toString()+".wav";
         history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
      }
      function previmage(){
@@ -85,13 +87,16 @@
         }else{
           n=8;
         }
-        env(n);
+        env(n-1);
         document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
+        document.getElementById('player').src="lfs/"+n.toString()+".wav";
         history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
      }
 
     </script>
  </head>
+
+<body id="edge"  style="background-color:#f7feff;margin:0; padding:0;-webkit-appearance: none;-moz-appearance: none;appearance: none;">
 <div id="main" style="width:1080px;line-height: 1;white-space:pre; auto; background-color:white;min-height:100vh;margin-right: auto; margin-left:auto;">
 <div id="container">
 <div id="left"> 
@@ -218,7 +223,7 @@
     n=1;
   }
   document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
-  //env(n);
+  env(n-1);
 </script>
 </body>
 </html>
