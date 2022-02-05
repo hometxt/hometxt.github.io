@@ -62,7 +62,7 @@
         document.getElementById("main").style.backgroundColor = maincolor;
         document.getElementById("main").style.color = txtcolor;
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
-        history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
+        //history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
      }
 
 
@@ -194,7 +194,7 @@
 
 </div>
 <div class="center" >
-<audio controls loop source src="lfs/1.wav" type="audio/wav" class="center" style="width:600px">
+<audio id="player" controls AutoPlay  loop source src="lfs/1.wav" type="audio/wav" class="center" style="width:600px">
 
 </div>
 
