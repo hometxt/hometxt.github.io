@@ -54,10 +54,10 @@
       totalgifs=8;
       var preloadimage=new Image();
       function env(e) {
-        envs=["Loud Cloud Puffin Proud","Meme Lord Hollow Gourd","Rave Saver Dave Mushroom","Third Eye Wise Guy","Big Blossom Come And Get Some","Math Alien Hyper Sapien","Bliss Mistress Kiss Paradise","Stone Starer Star Stepper"];
+        envs=["Loud Cloud Puffin Proud","Meme Lord Hollow Gourd","Rave Saver Dave Mushroom","Third Eye Wise Guy","Big Blossom Come And Get Some","Math Alien Hyper Sapien","Bliss Mistress Kiss Paradise","Stone Starer Star Stepper","Loopy Friends :)"];
 	      select=parseInt(e);
-        txtcolor=["black","black","black","black","black","black","black","black",][select];
-        maincolor=["#97effd","#dfe6ff","#dfe6ff","#deffe0","#deffe0","#dfe6ff","#ede4c7","#dfe6ff"][select];
+        txtcolor=["black","black","black","black","black","black","black","black","black"][select];
+        maincolor=["#97effd","#dfe6ff","#dfe6ff","#deffe0","#deffe0","#dfe6ff","#ede4c7","#dfe6ff","#ffffff"][select];
 
         document.getElementById("edge").style.backgroundColor = maincolor;
         document.getElementById("main").style.backgroundColor = maincolor;
@@ -92,6 +92,17 @@
         document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
         document.getElementById('player').src="lfs/"+n.toString()+".wav";
         history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
+     }
+     function start(){
+        document.getElementById("main").style.display="";
+        document.getElementById("container").style.display="";
+        document.getElementById("center").style.display="";
+        document.getElementById("player").style.display="";
+        document.getElementById("thegif").style.display="";
+        document.getElementById("left").style.display="";
+        document.getElementById("right").style.display="";
+        document.getElementById("title").style.display="none";
+        nextimage();
      }
 
     </script>
@@ -208,6 +219,52 @@
 
 </div>
   </div>
+
+
+
+<div id="title" style="width:400px;line-height: 1;white-space:pre; auto; background-color:white;min-height:100vh;margin-right: auto; margin-left:auto;">
+<button onclick="start()">                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                             8 loopy friends                             
+                     rendered from drawings in 2018                      
+                           too fun to be lamed                           
+                         too free to be chained                          
+                         listen to their sounds                          
+                        and u will be entertained                        
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                   :)                    
+                                                   \|/                   
+____________________________________________________|____________________
+                                                   / \                   
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         </button>
+</div> 
 </div>
 <script>
   urlin=window.location.search;
@@ -221,10 +278,23 @@
   if(params.has('n')){
     n=parseInt(params.get('n'));
   }else{
-    n=1;
+    n=9;
   }
   document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
   env(n-1);
+  if(n==9){
+
+        document.getElementById("main").style.display="none";
+        document.getElementById("container").style.display="none";
+        document.getElementById("center").style.display="none";
+        document.getElementById("player").style.display="none";
+        document.getElementById("thegif").style.display="none";
+        document.getElementById("left").style.display="none";
+        document.getElementById("right").style.display="none";
+
+
+  }
+
 </script>
 </body>
 </html>
