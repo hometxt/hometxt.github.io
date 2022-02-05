@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
- <title>home.txt</title>
+ <title id=name>home.txt</title>
  <head>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
@@ -63,6 +63,7 @@
         document.getElementById("main").style.backgroundColor = maincolor;
         document.getElementById("main").style.color = txtcolor;
         document.getElementById("player").style.color = maincolor;
+        document.getElementById("name").innerHTML = envs[e];
         document.getElementById("textcolor").innerHTML = "a:link, a:visited, button {color: "+txtcolor+";}";
         //history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
      }
