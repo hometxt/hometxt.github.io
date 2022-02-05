@@ -55,7 +55,7 @@
       var preloadimage=new Image();
       function env(e) {
         envs=["Loud Cloud Puffin Proud","Meme Lord Hollow Gourd","Rave Saver Dave Mushroom","Third Eye Wise Guy","Big Blossom Come And Get Some","Math Alien Hyper Sapien","Bliss Mistress Kiss Paradise","Stone Starer Star Stepper"];
-	      select=e;
+	      select=Int(e);
         txtcolor=["black","#ffcfc2","#00ff00","#ffffff","#404040","#000000","#0062ff","#ffae00","#00ba28","#000000"][select];
         maincolor=["#ffffff","#1b0f2b","#000000","#0000ff","#000000","#ffff00","#00ffa6","#fceae8","#4dff00","#900000"][select];
         edgecolor=["#f7feff","#514187","#ff0000","#c3c3c3","#040404","#000000","#00eaff","#fcfbd2","#bfff00","#292929"][select];
@@ -74,28 +74,28 @@
      function nextimage(){
         if(n<totalgifs){
           n=n+1;
-          e=e+1;
         }
-        env(e);
-        document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
-        document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
-        history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
+        //env(n);
+        document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
+        document.getElementById('thegif1').src="lfs/"+n.toString()+".jpg";
+        history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
         document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
         document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
-        preloadimage.src = "gfs/"+(n+1).toString()+".gif";
+        preloadimage.src = "lfs/"+(n+1).toString()+".jpg";
+        env(2);
      }
      function previmage(){
         if(n>1){
           n=n-1;
-          e=e-1;
         }
-        env(e);
+        //env(n);
         document.getElementById('thegif').src="gfs/"+n.toString()+".gif";
         document.getElementById('thegif1').src="gfs/"+n.toString()+".gif";
-        history.replaceState({ additionalInformation: ':)' },":D" , "gifs?e="+e+"&n="+n);
+        history.replaceState({ additionalInformation: ':)' },":D" , "loopyfriends?e="+e+"&n="+n);
         document.getElementById("counter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
         document.getElementById("dropcounter").innerHTML = n.toString().padStart(4," ")+"/"+totalgifs.toString().padEnd(4," ");
-        preloadimage.src = "gfs/"+(n-1).toString()+".gif";
+        preloadimage.src = "lfs/"+(n-1).toString()+".jpg";
+        env(2);
      }
 
     </script>
@@ -216,7 +216,7 @@
   params = new URLSearchParams(urlin);
   n=0;
   if(params.has('e')){
-    e=params.get('e');
+    e=parseInt(params.get('e'));
   }else{
     e=1;
   }
@@ -226,7 +226,7 @@
     n=1;
   }
   document.getElementById('thegif').src="lfs/"+n.toString()+".jpg";
-  env(e);
+  env(n);
 </script>
 </body>
 </html>
